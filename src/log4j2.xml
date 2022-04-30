@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="lab5main" fileName="lab5main.log" append="false">
+            <PatternLayout pattern="%d %c %level - %m%n"/>
+        </File>
+        <File name="lab5Command" fileName="lab5Command.log" append="false">
+            <PatternLayout pattern="%d %c %level - %m%n"/>
+        </File>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%c %level - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Controller.MainServlet" level="debug">
+            <AppenderRef ref="lab5main"/>
+        </Logger>
+        <Logger name="Controller.Command" level="debug">
+            <AppenderRef ref="lab5Command"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
