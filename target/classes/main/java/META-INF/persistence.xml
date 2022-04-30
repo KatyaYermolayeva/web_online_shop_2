@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="simpleFactory2"  transaction-type="JTA">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jta-data-source>jdbc/DSTest</jta-data-source>
+		<class>Model.Entity.Client</class>
+		<class>Model.Entity.Order</class>
+		<class>Model.Entity.Product</class>
+		<class>Model.Entity.Status</class>
+		<class>Model.Entity.OrdersProducts</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+					  value="jdbc:postgresql://ec2-99-80-170-190.eu-west-1.compute.amazonaws.com:5432/df1ecnjin7i9bg?sslmode=require"/>
+			<property name="javax.persistence.jdbc.user" value="koxclhyseendof"/>
+			<property name="org.Postgresql.Driver"
+					  value="com.mysql.cj.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.password" value="e7dff5ba18c83b4bb500186f36dda2ae65c301192e20c0ae31b49fdbbb1d54a6"/>
+			<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+		</properties>
+	</persistence-unit>
+</persistence>
