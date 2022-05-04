@@ -36,4 +36,14 @@ public class CookieFilter implements Filter {
         res.addCookie(cookie);
         filterChain.doFilter(servletRequest, servletResponse);
     }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+
+    }
 }

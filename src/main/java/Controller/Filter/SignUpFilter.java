@@ -40,4 +40,14 @@ public class SignUpFilter implements Filter {
         }
         filterChain.doFilter(servletRequest, servletResponse);
     }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+        
+    }
 }

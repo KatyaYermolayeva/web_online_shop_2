@@ -49,10 +49,10 @@
 
     </dependencies>
     <build>
-        <sourceDirectory>../..</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>../..</directory>
+                <directory>src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -65,6 +65,14 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19</version>
+                <configuration>
+                    <argLine>-Xmx1024m</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -99,7 +107,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <warSourceDirectory>../../../WebContent</warSourceDirectory>
+                    <warSourceDirectory>WebContent</warSourceDirectory>
                 </configuration>
             </plugin>
             <plugin>
