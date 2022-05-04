@@ -36,12 +36,23 @@
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.17.1</version>
+        </dependency>
+
     </dependencies>
     <build>
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>../..</sourceDirectory>
         <resources>
             <resource>
-                <directory>src</directory>
+                <directory>../..</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -72,7 +83,7 @@
                                 <processor>org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor
                             </processor>
                             </processors>
-                            <compilerArguments>-Aeclipselink.persistencexml=src/META-INF/persistence.xml</compilerArguments>
+                            <compilerArguments>-Aeclipselink.persistencexml=src/main/java/META-INF/persistence.xml</compilerArguments>
                         </configuration>
                     </execution>
                 </executions>
@@ -88,8 +99,7 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <warSourceDirectory>WebContent</warSourceDirectory>
-                    <!--       <skip>true</skip> -->
+                    <warSourceDirectory>../../../WebContent</warSourceDirectory>
                 </configuration>
             </plugin>
             <plugin>
